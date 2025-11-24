@@ -6,6 +6,10 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Science Extension</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      
       body {
         margin: 0;
         padding: 0;
@@ -42,6 +46,20 @@
         display: flex;
         gap: 40px;
       }
+
+      /* Mobile / small screens */
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 10px;
+          background: url("assets/portal_bg.png") no-repeat center center;
+          background-size: cover; /* remove 'fixed' on mobile */
+        }
+
+        /* Very small screens */
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.7em;
+        }
 
       a.button {
         display: inline-block;
