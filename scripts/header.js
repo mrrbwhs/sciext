@@ -14,6 +14,7 @@ function loadHeader() {
         modulesButton.addEventListener("click", (e) => {
           e.stopPropagation();
           moduleDropdown.classList.toggle("show");
+          resourcesDropdown.classList.remove("show");
         });
 
         window.addEventListener("click", () => {
@@ -25,6 +26,7 @@ function loadHeader() {
         resourcesButton.addEventListener("click", (e) => {
           e.stopPropagation();
           resourcesDropdown.classList.toggle("show");
+          moduleDropdown.classList.remove("show");
         });
 
         window.addEventListener("click", () => {
