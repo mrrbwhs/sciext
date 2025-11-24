@@ -5,17 +5,30 @@ function loadHeader() {
     .then((data) => {
       document.getElementById("navbar-placeholder").innerHTML = data;
 
-      const button = document.getElementById("modulesButton");
-      const dropdown = document.getElementById("moduleDropdown");
+      const modulesButton = document.getElementById("modulesButton");
+      const moduleDropdown = document.getElementById("moduleDropdown");
+      const resourcesButton = document.getElementById("resourcesButton");
+      const resourcesDropdown = document.getElementById("resourcesDropdown");
 
-      if (button && dropdown) {
-        button.addEventListener("click", (e) => {
+      if (modulesButton && moduleDropdown) {
+        modulesButton.addEventListener("click", (e) => {
           e.stopPropagation();
-          dropdown.classList.toggle("show");
+          moduleDropdown.classList.toggle("show");
         });
 
         window.addEventListener("click", () => {
-          dropdown.classList.remove("show");
+          moduleDropdown.classList.remove("show");
+        });
+      }
+
+      if (resourcesButton && resourcesDropdown) {
+        resourcesButton.addEventListener("click", (e) => {
+          e.stopPropagation();
+          resourcesDropdown.classList.toggle("show");
+        });
+
+        window.addEventListener("click", () => {
+          resourcesDropdown.classList.remove("show");
         });
       }
     });
